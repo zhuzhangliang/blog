@@ -4,6 +4,8 @@
 
 This web application is a small blog system, where users can browse articles or comments and manage their accounts.
 
+![Blog System Model](https://github.com/zhuzhangliang/blog/blob/master/blog_model.png)
+
 ## Features
 
 * User login and registration, support captcha (no password retrieval function)
