@@ -1,11 +1,11 @@
 # Blog
 
-### Overview
+## Overview
 
 This web application is a small blog system, where users can browse articles or comments and manage their accounts.
 
 
-### Features
+## Features
 
 * User login and registration, support captcha (no password retrieval function)
 * User postings and comments (only plain text, rich text not supported)
@@ -13,7 +13,7 @@ This web application is a small blog system, where users can browse articles or 
 
 ![Blog System Model](https://github.com/zhuzhangliang/blog/blob/master/blog_model.png)
 
-### Requirements
+## Requirements
 
 * Django 2.1
 * Django Simple Captcha
