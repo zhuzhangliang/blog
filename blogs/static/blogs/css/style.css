@@ -1,0 +1,463 @@
+/* General */
+
+
+
+
+/* Base Template */
+
+.wrapper .container {
+	max-width: 80rem;
+}
+
+.navigation {
+    background: #f4f5f6;
+    border-bottom: .1rem solid #d1d1d1;
+    display: block;
+    height: 5.2rem;
+    width: 100%;
+	position: fixed;
+	z-index: 1;
+}
+
+.navigation-title {
+	color: #606c76;
+	display: inline;
+	line-height: 5.2rem;
+	position: relative;
+}
+
+.navigation-title .title-image {
+	height: 2.0rem;
+    position: relative;
+    top: .3rem;
+}
+
+.navigation-title .title-text {
+	display: inline;
+	font-size: 2rem;
+	font-weight: 700;
+	letter-spacing: .1rem;
+	text-transform: uppercase;
+	color: #9b4dca;
+}
+
+.navigation-list {
+	float: right;
+	list-style: none;
+	margin-bottom: 0;
+}
+
+.navigation-list .list-item {
+	float: left;
+	margin-bottom: 0;
+	margin-left: 2.5rem;
+	position: relative;
+}
+
+.navigation-list .list-item-link {
+	line-height: 5.2rem;
+	text-decoration: none;
+	font-size: 2rem;
+	font-weight: 700;
+	letter-spacing: .1rem;
+	text-transform: uppercase;
+	color: #9b4dca;
+}
+
+.content {
+	padding-top: 12.2rem;
+	padding-bottom: 7rem;
+}
+
+
+/* Signup Page */
+
+.signup {
+	max-width: 36rem;
+	margin: 0 auto;
+	background-color: #f4f5f6;
+	border: .1rem solid #d1d1d1;
+	padding: 3rem 3rem 1rem 3rem;
+	border-radius: 2rem;
+}
+
+.signup-header {
+	font-weight: bold;
+	color: #9b4dca;
+	margin-bottom: 2rem;
+	text-align: center;
+}
+
+.signup-message {
+	text-align: center;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+.signup-terms {
+	font-weight: 300;
+	color: #A3AFAB;
+	text-align: center;
+	padding-bottom: 1rem;
+}
+
+.signup .form-input {
+
+}
+
+.signup .form-submit {
+	margin-top: .5rem;
+	width: 100%;
+	font-size: 2rem;
+}
+
+
+/* Login Page */
+
+.login {
+	max-width: 36rem;
+	margin: 2rem auto;
+	background-color: #f4f5f6;
+	border: .1rem solid #d1d1d1;
+	padding: 3rem 3rem 1rem 3rem;
+	border-radius: 2rem;
+}
+
+.login-header {
+	font-weight: bold;
+	color: #9b4dca;
+	margin-bottom: 2rem;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.login-message {
+	text-align: center;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+.login-footer {
+	font-weight: 300;
+	color: #A3AFAB;
+	text-align: center;
+	padding-bottom: 1rem;
+}
+
+.login .form-input {
+
+}
+
+.login .form-submit {
+	margin-top: .5rem;
+	width: 100%;
+	font-size: 2rem;
+}
+
+
+/* New post page */
+
+.newpost {
+
+}
+
+.newpost-form {
+
+}
+
+.newpost .form-input {
+	font-size: 4rem;
+	font-weight: 700;
+	border: none;
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+	padding-left: 0;
+	margin-bottom: 0;
+}
+
+.newpost .form-textarea {
+	min-height: 50rem;
+	border: none;
+	padding-left: 0;
+	font-size: 2.1rem;
+}
+
+.newpost .form-input:focus,
+.newpost .form-textarea:focus {
+	border: none;
+}
+
+.newpost .form-submit {
+
+}
+
+.newpost .form-message {
+    font-weight: 300;
+    margin-left: 1rem;
+}
+
+/* Edit post page */
+
+.editpost {
+
+}
+
+.editpost-form {
+
+}
+
+.editpost .form-input {
+	font-size: 4rem;
+	font-weight: 700;
+	border: none;
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+	padding-left: 0;
+	margin-bottom: 0;
+}
+
+.editpost .form-textarea {
+	min-height: 50rem;
+	border: none;
+	padding-left: 0;
+	font-size: 2.1rem;
+}
+
+.editpost .form-input:focus,
+.editpost .form-textarea:focus {
+	border: none;
+}
+
+.editpost .form-submit {
+
+}
+
+.editpost .form-message {
+    font-weight: 300;
+    margin-left: 1rem;
+}
+
+
+/* Post template */
+
+.post {
+	margin-bottom: 2.0rem;
+}
+
+.post-meta {
+	margin-bottom: 2rem;
+	clear: both;
+	position: relative;
+}
+
+.post .meta-author {
+	width: 5rem;
+	height: 5rem;
+	vertical-align: middle;
+	display: inline-block;
+}
+
+.post .meta-author-image {
+	width: auto;
+	height: 100%;
+}
+
+.post .meta-post {
+	vertical-align: middle;
+	display: inline-block;
+	padding-left: 1.5rem;
+}
+
+.post .meta-post-author {
+	font-weight: 700;
+	letter-spacing: .1rem;
+	text-transform: uppercase;
+}
+
+.post .meta-post-date {
+
+}
+
+.post-title {
+	font-size: 4rem;
+	font-weight: 700;
+}
+
+.post-content {
+	font-size: 2.1rem;
+	margin-bottom: 2rem;
+}
+
+.post-like {
+	float: left;
+	margin-bottom: 4rem;
+}
+
+.post .like-icon {
+	width: 2.5rem;
+	height: 2.5rem;
+	vertical-align: middle;
+}
+
+.post .like-count {
+	font-size: 2rem;
+	vertical-align: middle;
+	margin-left: 0.5rem;
+}
+
+.post-edit {
+	display: inline-block;
+	margin-left: 2rem;
+
+}
+
+.post-edit .edit-icon {
+	width: 2.5rem;
+	height: 2.5rem;
+	vertical-align: middle;
+}
+
+.post-delete {
+	display: inline-block;
+	margin-left: 2rem;
+	padding-left: 2rem;
+	border-left: .1rem solid #d1d1d1;
+
+}
+
+.post-delete .delete-icon {
+	width: 2.5rem;
+	height: 2.5rem;
+	vertical-align: middle;
+}
+
+.post-comment {
+	display: inline-block;
+	/*margin-left: 2rem;*/
+
+}
+
+.post-comment .comment-icon {
+	width: 2.5rem;
+	height: 2.5rem;
+	vertical-align: middle;
+}
+
+.post-dislike {
+	display: inline-block;
+	margin-left: 2rem;
+	padding-left: 2rem;
+	border-left: .1rem solid #d1d1d1;
+}
+
+.post-dislike .dislike-icon {
+	width: 2.5rem;
+	height: 2.5rem;
+	vertical-align: middle;
+}
+
+
+/* Comments */
+
+.comments {
+	margin-top: 8rem;
+}
+
+.comment {
+	border: .1rem solid #d1d1d1;
+	margin-top: 2.0rem;
+	padding: 2.0rem;
+}
+
+.comment-header {
+	margin-top: 4.0rem;
+	margin-left: 2.0rem;
+}
+
+.comment-meta {
+	margin-bottom: 2rem;
+}
+
+.comment .meta-author {
+	width: 3.6rem;
+	height: 3.6rem;
+	vertical-align: middle;
+	display: inline-block;
+}
+
+.comment .meta-author-image {
+	width: auto;
+	height: 100%;
+}
+
+.comment .meta-comment {
+	vertical-align: middle;
+	display: inline-block;
+	padding-left: 0.5rem;
+	font-size: 1.4rem;
+}
+
+.comment .meta-comment-author {
+	font-weight: 700;
+	letter-spacing: .1rem;
+	text-transform: uppercase;
+}
+
+.comment .meta-comment-date {
+
+}
+
+.comment-content {
+	font-size: 1.8rem;
+}
+
+.comment-delete {
+	display: inline-block;
+	margin-left: 1rem;
+	float: right;
+}
+
+.comment .delete-icon {
+	width: 2.0rem;
+	height: 2.0rem;
+	vertical-align: middle;
+}
+
+.comment-edit {
+	display: inline-block;
+	margin-left: 1rem;
+	float: right;
+}
+
+.comment .edit-icon {
+	width: 2.0rem;
+	height: 2.0rem;
+	vertical-align: middle;
+}
+
+
+/* Footer */
+
+.footer {
+	margin-bottom: 2rem;
+}
+
+/* Helpers */
+
+
+.captcha {
+	float: right;
+	height: 3.8rem;
+	width: 33%;
+	border: 0.1rem solid #d1d1d1;
+	border-radius: .4rem;
+}
+
+#id_captcha_1 {
+	float: left;
+	width: 65%;
+}
+
+.errorlist {
+    clear: left;
+}

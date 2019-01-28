@@ -1,0 +1,12 @@
+{% extends "blogs/base.html" %}
+
+{% block content %}
+
+  <h1>您确定要删除这条评论吗？</h1>
+
+  <form action="" method="POST">
+    {% csrf_token %}
+    <input type="submit" value="是的，删除"/>
+  </form>
+
+{% endblock %}

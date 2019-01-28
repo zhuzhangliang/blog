@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>blog</title>
+  {% load static %}
+  <link rel="stylesheet"
+        href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+  <link rel="stylesheet" href="{% static 'blogs/css/normalize.css' %}">
+  <link rel="stylesheet" href="{% static 'blogs/css/milligram.min.css' %}">
+  <link rel="stylesheet" href="{% static 'blogs/css/style.css' %}">
+</head>
+<body>
+<div class="wrapper">
+  <nav class="navigation">
+    <div class="container">
+      <a class="navigation-title" href="/">
+        {% if user.is_authenticated %}
+          <h1 class="title-text">欢迎, {{ user.username }}!</h1>
+        {% else %}
+          <h1 class="title-text">博 客</h1>
+        {% endif %}
+      </a>
+      <ul class="navigation-list">
+        <li class="list-item">
+          {% if user.is_authenticated %}
+            <a class="list-item-link" href="{% url 'new_post' %}">写文章</a>
+          {% else %}
+            <a class="list-item-link" href="{% url 'signup' %}">注册</a>
+          {% endif %}
+        </li>
+        <li class="list-item">
+          {% if user.is_authenticated %}
+            <a class="list-item-link" href="{% url 'logout' %}">退出</a>
+          {% else %}
+            <a class="list-item-link" href="{% url 'login' %}">登录</a>
+          {% endif %}
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <section class="content">
+    <div class="container">
+      {% block content %}
+      {% endblock %}
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="container">
+      <small>Icons made by <a
+          href="http://www.flaticon.com/authors/madebyoliver"
+          title="Madebyoliver">Madebyoliver</a>, <a
+          href="http://www.flaticon.com/authors/bryn-taylor"
+          title="Bryn Taylor">Bryn Taylor</a>, <a
+          href="http://www.flaticon.com/authors/gregor-cresnar"
+          title="Gregor Cresnar">Gregor Cresnar</a> and <a
+          href="http://www.flaticon.com/authors/icon-works" title="Icon Works">Icon
+        Works</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a>
+        is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"
+                          title="Creative Commons BY 3.0" target="_blank">CC
+          3.0 BY</a></small>
+    </div>
+  </footer>
+</div>
+<script src="{% static 'blogs/js/jquery-3.3.1.min.js' %}"></script>
+<script src="{% static 'blogs/js/script.js' %}"></script>
+</body>
+</html>
+

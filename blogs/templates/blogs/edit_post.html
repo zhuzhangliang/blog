@@ -1,0 +1,26 @@
+{% extends "blogs/base.html" %}
+
+{% block content %}
+
+  <div class="editpost">
+    <div class="editpost-form">
+      <form method="post" autocomplete="off">
+        {% csrf_token %}
+        <input autofocus class="form-input" placeholder="Title" type="text"
+               name="subject" value="{{ post.subject }}">
+        {{ form.subject.errors }}
+        <textarea class="form-textarea" placeholder="Tell your story..."
+                  type="text" name="content">{{ post.content }}</textarea>
+        {{ form.subject.errors }}
+        <a href="{% url 'post' post.id %}">
+          <button class="button-outline">back</button>
+        </a>
+        <input class="button-outline form-submit" type="submit" value="save">
+        {% for error in form.non_field_errors %}
+          {{ error }}
+        {% endfor %}
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

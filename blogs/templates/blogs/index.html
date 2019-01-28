@@ -1,0 +1,29 @@
+{% extends "blogs/base.html" %}
+
+{% block content %}
+
+  {% load static %}
+
+  <div class="post">
+    {% for post in posts %}
+      <div class="post-meta">
+        <div class="meta-author">
+          <img class="meta-author-image"
+               src="{% static 'blogs/images/compose.svg' %}" alt="">
+        </div>
+        <div class="meta-post">
+          <div class="meta-post-author">{{ post.owner }}</div>
+          <div
+              class="meta-post-date">{{ post.create_date|date:"M d, Y" }}</div>
+        </div>
+      </div>
+      <h1 class="post-title">
+        <a href="{% url 'post' post.id %}">{{ post.subject }}</a>
+      </h1>
+      <p class="post-content">
+        {{ post.content|linebreaks }}
+      </p>
+    {% endfor %}
+  </div>
+
+{% endblock %}

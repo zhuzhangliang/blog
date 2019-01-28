@@ -1,0 +1,79 @@
+{% extends 'blogs/base.html' %}
+
+{% block content %}
+
+  {% load static %}
+
+  <div class="post">
+    <div class="post-meta">
+      <div class="meta-author">
+        <img class="meta-author-image"
+             src="{% static 'blogs/images/compose.svg' %}" alt="">
+      </div>
+      <div class="meta-post">
+        <div class="meta-post-author">{{ post.owner }}</div>
+        <div class="meta-post-date">{{ post.create_date|date:"M d, Y" }}</div>
+      </div>
+    </div>
+    <h1 class="post-title">{{ post.subject }}</h1>
+    <p class="post-content">{{ post.content|linebreaks }}</p>
+    {% if user.is_authenticated %}
+      <a href="{% url 'new_comment' post.id %}">
+        <div class="post-comment">
+          <img src="{% static 'blogs/images/comment-bubble.svg' %}" alt=""
+               class="comment-icon">
+        </div>
+      </a>
+    {% endif %}
+    {% if user.is_authenticated and post.owner == request.user %}
+      <a href="{% url 'delete_post' post.id %}">
+        <div class="post-delete">
+          <img src="{% static 'blogs/images/rubbish-bin.svg' %}" alt=""
+               class="delete-icon">
+        </div>
+      </a>
+      <a href="{% url 'edit_post' post.id %}">
+        <div class="post-edit">
+          <img src="{% static 'blogs/images/edit.svg' %}" alt=""
+               class="edit-icon">
+        </div>
+      </a>
+    {% endif %}
+
+    <div class="comments">
+      {% for comment in post_comments %}
+        <div class="comment">
+          <div class="comment-meta">
+            <div class="meta-author">
+              <img class="meta-author-image"
+                   src="{% static 'blogs/images/compose.svg' %}" alt="">
+            </div>
+            <div class="meta-comment">
+              <div class="meta-comment-author">{{ comment.owner }}</div>
+              <div
+                  class="meta-comment-date">{{ comment.create_date|date:"M d, Y" }}</div>
+            </div>
+          </div>
+          <p class="comment-content">{{ comment.content|linebreaks }}</p>
+          <div class="clearfix">
+            {% if user.is_authenticated and comment.owner == request.user %}
+              <a href="{% url 'edit_comment' post.id comment.id %}">
+                <div class="comment-edit">
+                  <img src="{% static 'blogs/images/edit.svg' %}" alt=""
+                       class="edit-icon">
+                </div>
+              </a>
+              <a href="{% url 'delete_comment' post.id comment.id %}">
+                <div class="comment-delete">
+                  <img src="{% static 'blogs/images/rubbish-bin.svg' %}" alt=""
+                       class="delete-icon">
+                </div>
+              </a>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+{% endblock %}
