@@ -15,7 +15,7 @@ This web application is a small blog system, where users can browse articles or 
 
 ## Requirements
 
-* Django 2.1
+* Django 2.1+
 * SQLite 3
 * Django Simple Captcha
 * Milligram
